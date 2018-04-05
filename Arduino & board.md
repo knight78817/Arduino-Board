@@ -9,29 +9,13 @@ https://blog.gtwang.org/iot/arduino-ethernet-shield-w5100-dhcp-ip-address/)
 這裡介紹如何使用 Arduino Ethernet Shield W5100 乙太網路擴充板，透過 DHCP 自動取得 IP 位址。
 
 這張是副廠的 Arduino Ethernet Shield W5100 乙太網路擴充板，只要兩百多塊。
-	![baidu](https://blog.gtwang.org/wp-content/uploads/2015/03/arduino-ethernet-shield-w5100-2-816x459.jpg "百度logo")
-arduino-ethernet-shield-w5100-3
-Arduino Ethernet Shield W5100 乙太網路擴充板背面
+![baidu](https://blog.gtwang.org/wp-content/uploads/2015/03/arduino-ethernet-shield-w5100-2-816x459.jpg "arduino-ethernet-shield-w5100")
 
 擴充板在使用時就直接插在 Arduino 即可，這裡我是拿一張 UNO 的相容板來示範。
 
-arduino-ethernet-shield-w5100-4
-UNO 相容板乙太網路擴充板
-
-插上擴充板之後，側面的樣子。
-
-arduino-ethernet-shield-w5100-5
-UNO 相容板乙太網路擴充板
-
 這張擴充板在插上 UNO 上面時，RJ45 的插座下方的針腳很容易頂到 UNO 的 USB 插座，如果怕短路的話，在上面貼個膠帶會比較好。
 
-arduino-ethernet-shield-w5100-6
-UNO 相容板乙太網路擴充板
-
 接上 USB 線與網路線，就可以來開發程式了。
-
-arduino-ethernet-shield-w5100-7
-接上 USB 線與網路線
 
 要使用這張乙太網路擴充板需要一些函式庫，而 Arduino 的開發環境中有內建基本函式庫可以使用，以下是從 DHCP 取得 IP 位址，讓 Arduino 連上網路的範例。
 
