@@ -52,7 +52,7 @@ void loop() {
 ```
 
 這裡的 Ethernet.begin(mac) 是設定網路卡 MAC 卡號，並且以 DHCP 取得 IP 位址，如果要自行指定 IP 位址，可以這樣寫：
-
+```cpp
 // 網路卡 MAC 卡號
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 
@@ -62,6 +62,7 @@ byte ip[] = { 192, 168, 1, 200 };
 void setup() {
   Ethernet.begin(mac, ip);
 }
+```
 若要設定 DNS、預設閘道與子網域等，就將這些參數再加上去即可，詳細用法請參考 Ethernet.begin() 的說明。
 
 將寫好的程式編譯並上傳至 Arduino 之後，開啟序列埠監控視窗，就可以看到 Arduino 從 DHCP 伺服器所取得的動態 IP 位址了。
