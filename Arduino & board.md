@@ -63,7 +63,8 @@ void setup() {
   Ethernet.begin(mac, ip);
 }
 ```
-若要設定 DNS、預設閘道與子網域等，就將這些參數再加上去即可，詳細用法請參考 Ethernet.begin() 的說明。
+若要設定 DNS、預設閘道與子網域等，就將這些參數再加上去即可，詳細用法請參考 [Ethernet.begin()](https://www.arduino.cc/en/Reference/EthernetBegin)
+的說明。
 
 將寫好的程式編譯並上傳至 Arduino 之後，開啟序列埠監控視窗，就可以看到 Arduino 從 DHCP 伺服器所取得的動態 IP 位址了。
 
