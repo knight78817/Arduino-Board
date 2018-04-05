@@ -21,7 +21,7 @@ https://blog.gtwang.org/iot/arduino-ethernet-shield-w5100-dhcp-ip-address/)
 
 要使用這張乙太網路擴充板需要一些函式庫，而 Arduino 的開發環境中有內建基本函式庫可以使用，以下是從 DHCP 取得 IP 位址，讓 Arduino 連上網路的範例。
 
-```
+```cpp
 #include <SPI.h>
 #include <Ethernet.h>
 
