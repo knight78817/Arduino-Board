@@ -21,7 +21,7 @@ https://blog.gtwang.org/iot/arduino-ethernet-shield-w5100-dhcp-ip-address/)
 這裡介紹如何使用 Arduino Ethernet Shield W5100 乙太網路擴充板，透過 DHCP 自動取得 IP 位址。
 
 這張是副廠的 Arduino Ethernet Shield W5100 乙太網路擴充板，只要兩百多塊。
-![baidu](https://blog.gtwang.org/wp-content/uploads/2015/03/arduino-ethernet-shield-w5100-2-816x459.jpg "arduino-ethernet-shield-w5100")
+![w5100](https://blog.gtwang.org/wp-content/uploads/2015/03/arduino-ethernet-shield-w5100-2-816x459.jpg "arduino-ethernet-shield-w5100")
 
 擴充板在使用時就直接插在 Arduino 即可，這裡我是拿一張 UNO 的相容板來示範。
 
@@ -114,6 +114,51 @@ ping 輸出
 [課程31-搖桿模組實驗](http://siang-tong-studio.blogspot.tw/2015/05/31.html)
 
 [ARDUINO 電子積木 PS2遊戲搖杆模組 雙軸按鍵搖杆 w55 [30712-041]](http://goods.ruten.com.tw/item/show?21551397513091)
+
+![Joystick](https://img.alicdn.com/imgextra/i1/462592119/T2FC5.XCdXXXXXXXXX_!!462592119.jpg "JoyStick")
+
+D:\Howder\Arduino\JoyStick
+
+```cpp
+int xPin = A1;
+int yPin = A0;
+int buttonPin = 2;
+
+int xPosition = 0;
+int yPosition = 0;
+int buttonState = 0;
+
+void setup() {
+ // initialize serial communications at 9600 bps:
+ Serial.begin(9600); 
+ 
+ pinMode(xPin, INPUT);
+ pinMode(yPin, INPUT);
+
+ //activate pull-up resistor on the push-button pin
+ pinMode(buttonPin, INPUT_PULLUP); 
+ 
+ // For versions prior to Arduino 1.0.1
+ // pinMode(buttonPin, INPUT);
+ // digitalWrite(buttonPin, HIGH);
+ 
+}
+
+void loop() {
+ xPosition = analogRead(xPin);
+ yPosition = analogRead(yPin);
+ buttonState = digitalRead(buttonPin);
+ 
+ Serial.print("X: ");
+ Serial.print(xPosition);
+ Serial.print(" | Y: ");
+ Serial.print(yPosition);
+ Serial.print(" | Button: ");
+ Serial.println(buttonState);
+
+ delay(100); // add some delay between reads
+}
+```
 
 
 # 伺服馬達
