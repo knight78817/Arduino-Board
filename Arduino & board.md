@@ -159,6 +159,7 @@ void loop() {
  delay(100); // add some delay between reads
 }
 ```
+![image](https://github.com/knight78817/Arduino-board/blob/master/JoyStickMonitor.PNG)
 
 
 # 伺服馬達
